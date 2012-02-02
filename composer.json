@@ -1,0 +1,26 @@
+{
+    "name": "wideimage/wideimage",
+    "type": "library",
+    "description": "WideImage image manipulation library",
+    "keywords": ["image", "manipulation"],
+    "homepage": "http://wideimage.sourceforge.net/",
+    "version": "11.02.19",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Gasper Kozak",
+        },
+        {
+            "name": "David M. Paz",
+            "email": "davidmpaz@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.2.4"
+    },
+    "autoload": {
+        "psr-0" : {
+            "WideImage_" : "lib/"
+        }
+    }
+}
