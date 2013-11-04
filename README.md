@@ -63,7 +63,6 @@ $ git submodule update --init
 
 Just download the files and put them under `vendor/wideimage` directory.
 
-
 ## Configure the Autoloader
 
 Add the `WideImage_` prefix to your autoloader:
@@ -77,6 +76,31 @@ $loader->registerPrefixes(array(
     'WideImage_'       => __DIR__.'/../vendor/wideimage/lib',
 ));
 ```
+
+## Bundle Installation with Composer
+
+If you are using a Symfony installation with composer, first update your composer.json file adding the requirement and the github repository as vcs type
+
+``` yml
+    "require": {
+        ...
+        "wideimage/wideimage": "dev-master"
+    }
+    ...
+    "repositories": [
+        ...
+        {
+            "type": "vcs",
+            "url": "https://github.com/davidmpaz/WideImageBundle.git"
+        }
+    ]
+```
+Update your composer libraries :
+
+``` bash
+$ php composer.phar update
+```
+Now, the WideImage bundle is ready to be used. With composer installation is not needed to update the autoload.php
 
 ## Using the Bundle
 
